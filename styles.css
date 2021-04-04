@@ -1,14 +1,64 @@
-@media (min-width: 320px) and (max-width: 480px) {
-    * {
-        background-color: #f2e9de;
+@media screen and (max-width: 600px) {
+
+    .container {
+        display: grid;
+        grid-template-rows: 5rem 8rem 1fr 5rem;
+        grid-template-areas:
+            'header header'
+            'sidebar sidebar'
+            'content content'
+            'footer footer';
     }
+    
+    .sidebar {
+        display: flex;
+        justify-content: center;
+    }
+    
+    textarea {
+        max-width: 100vw;
+    }
+
+    .save-button {
+        justify-content: center;
+    }
+
+    .delete-button {
+        justify-content: center;
+    }
+
 }
 /* Mobile Devices Size */
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    * {
-        background-color: #f2e9de;
+@media screen and (max-width: 1024px) {
+
+    .container {
+        display: grid;
+        grid-template-rows: 5rem 8rem 1fr 5rem;
+        grid-template-areas:
+            'header header'
+            'sidebar sidebar'
+            'content content'
+            'footer footer';
     }
+    
+    .sidebar {
+        display: flex;
+        justify-content: center;
+    }
+    
+    textarea {
+        max-width: 100vw;
+    }
+
+    .save-button {
+        justify-content: center;
+    }
+
+    .delete-button {
+        justify-content: center;
+    }
+
 }
 /* Small Screens & Laptops Size */
 
@@ -82,7 +132,7 @@
 }
 
 .side-nav {
-    background-color: #fffaf3;
+    background-color: #f2e9de;
     color: #286983;
     font-family: 'Nunito', sans-serif;
     font-size: 15px;;
