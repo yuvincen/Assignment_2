@@ -17,7 +17,7 @@
 
 #container > .header {
     grid-area: header;
-    background-color: #E8E8E8;
+    background-color: #f2e9de;
     display: block;
     justify-content: flex-end;
     padding: 1rem;
@@ -60,11 +60,11 @@ h1 {
 
 .sidebar {
     grid-area: sidebar;
-    background-color: #E8E8E8;
+    background-color: #f2e9de;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 .sidebar-button {
@@ -87,78 +87,52 @@ h1 {
     font-size: 15px;
 }
 
-#container > .content {
+.content {
     grid-area: content;
-    background-color: #E8E8E8;
-}
-
-.add-button {
+    display: flex;
     background-color: #f2e9de;
-    border: none;
+    max-height: 600vh;
+    max-width: 600vw;
+    padding-left: 20rem;
+}
+
+.fas {
+    grid-area: content;
     color: #286983;
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 15px 30px;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
+    font-size: 30px;
 }
 
-.add-text {
-    background-color: #f2e9de;
+#maintext {
+    padding: 10px 20px;
+    max-width: 600px;
+}
+
+[contenteditable] {
+    font-size: 25px;
+    color: #ea9a97;
+}
+
+[contenteditable] > div {
+    font-size: 18px;
+    color: #f2e9de;
+}
+
+[contenteditable] > div:first-child {
+    color: #ea9a97;
+    font-size: 25px;
+}
+
+[contenteditable]:focus {
+    outline: none;
+}
+
+button {
+    font-size: 18px;
+    padding-top: 5px;
+    margin: 8px 8px 0px 0px;
     border: none;
-    color: #286983;
-    font-family: 'Raleway', sans-serif; 
-    font-size: 20px;
-    font-weight: bold;
-    float: left;
-    text-align: top;
-    text-decoration: none;
-    margin-left: 20%;
-    height: 40%;
-    width: 3%;
-}
-
-textarea {
-    padding: 10px;
-    line-height: 1.5;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px #999;
-    resize: none;
-    padding-left:10px;
-    padding-top: 10px;
-    margin-top: 14%;
-    margin-left: 0%;
-    height: 20%;
-    width: 35%;
-    top: 20%;
-    left: 15%;
-}
-
-.save-button {
-    background-color: #f2e9de;
-    border: none;
-    color: #286983;
-    font-family: 'Raleway', sans-serif; 
-    font-size: 14px;
-    font-weight: bold;
-    position: relative;
-    top: 3%;
-    right: 11%;
-}
-
-.delete-button {
     background: #f2e9de;
-    border: none;
-    color: #286983;
-    font-family: 'Raleway', sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    position: relative;
-    top: 3%;
-    right: 11%;
+    color: #59546d;
 }
 
 .dark-mode-button {
@@ -211,7 +185,7 @@ body[dark-mode=dark] {
 }
 
 body[dark-mode="dark"] .dark-mode-button span:nth-child(1){
-    background-color: #c4a7e7
+    background-color: #c4a7e7;
     color: #141516;
 }
 
@@ -252,18 +226,112 @@ body[dark-mode=dark] .dark-mode-button span:nth-child(2) {
         font-weight: bolder;
     }
 
-    textarea {
-        max-width: 100vw;
+    content {
+        grid-area: content;
+        display: flex;
+        background-color: #f2e9de;
+        max-height: 600vh;
+        max-width: 600vw;
+        padding-left: 20rem;
     }
-
-    .save-button {
-        justify-content: center;
+    
+    .fas {
+        grid-area: content;
+        color: #286983;
+        font-size: 30px;
     }
-
-    .delete-button {
-        justify-content: center;
+    
+    #maintext {
+        padding: 10px 20px;
+        max-width: 600px;
     }
-
+    
+    [contenteditable] {
+        font-size: 25px;
+        color: #ea9a97;
+    }
+    
+    [contenteditable] > div {
+        font-size: 18px;
+        color: #f2e9de;
+    }
+    
+    [contenteditable] > div:first-child {
+        color: #ea9a97;
+        font-size: 25px;
+    }
+    
+    [contenteditable]:focus {
+        outline: none;
+    }
+    
+    button {
+        font-size: 18px;
+        padding-top: 5px;
+        margin: 8px 8px 0px 0px;
+        border: none;
+        background: #f2e9de;
+        color: #59546d;
+    }
+    
+    .dark-mode-button {
+        background:0;
+        border: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+        height: 40px;
+        width: 100px;
+        position: relative;
+        border: 1px solid rgba(255,255,255,0);
+    }
+    
+    .dark-mode-button:focus {
+        outline:none;
+    }
+    
+    .dark-mode-button span:nth-child(1) {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100px;
+        height:40px;
+        border-radius: 20px;
+        background-color: #d6d7db;
+        box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 40%);
+        transition: .2s;
+    }
+    
+    .dark-mode-button span:nth-child(2) {
+        position: absolute;
+        top:5px;
+        left:5px;
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 40%);
+        transition: .2s;
+    }
+    
+    body {
+        background-color: #f6f6f6;
+        transition: background-color .3s;
+    }
+    
+    body[dark-mode=dark] {
+        background-color: #191724;
+        color: #c4a7e7;
+    }
+    
+    body[dark-mode="dark"] .dark-mode-button span:nth-child(1){
+        background-color: #c4a7e7;
+        color: #141516;
+    }
+    
+    body[dark-mode=dark] .dark-mode-button span:nth-child(2) {
+        left: 65px;
+        background-color: #191724;
+    }
 }
 /* Mobile Devices Size */
 
@@ -297,16 +365,111 @@ body[dark-mode=dark] .dark-mode-button span:nth-child(2) {
         font-weight: bolder;
     }
     
-    textarea {
-        max-width: 100vw;
+    content {
+        grid-area: content;
+        display: flex;
+        background-color: #f2e9de;
+        max-height: 600vh;
+        max-width: 600vw;
+        padding-left: 20rem;
     }
-
-    .save-button {
-        justify-content: center;
+    
+    .fas {
+        grid-area: content;
+        color: #286983;
+        font-size: 30px;
     }
-
-    .delete-button {
-        justify-content: center;
+    
+    #maintext {
+        padding: 10px 20px;
+        max-width: 600px;
+    }
+    
+    [contenteditable] {
+        font-size: 25px;
+        color: #ea9a97;
+    }
+    
+    [contenteditable] > div {
+        font-size: 18px;
+        color: #f2e9de;
+    }
+    
+    [contenteditable] > div:first-child {
+        color: #ea9a97;
+        font-size: 25px;
+    }
+    
+    [contenteditable]:focus {
+        outline: none;
+    }
+    
+    button {
+        font-size: 18px;
+        padding-top: 5px;
+        margin: 8px 8px 0px 0px;
+        border: none;
+        background: #f2e9de;
+        color: #59546d;
+    }
+    
+    .dark-mode-button {
+        background:0;
+        border: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+        height: 40px;
+        width: 100px;
+        position: relative;
+        border: 1px solid rgba(255,255,255,0);
+    }
+    
+    .dark-mode-button:focus {
+        outline:none;
+    }
+    
+    .dark-mode-button span:nth-child(1) {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100px;
+        height:40px;
+        border-radius: 20px;
+        background-color: #d6d7db;
+        box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 40%);
+        transition: .2s;
+    }
+    
+    .dark-mode-button span:nth-child(2) {
+        position: absolute;
+        top:5px;
+        left:5px;
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 40%);
+        transition: .2s;
+    }
+    
+    body {
+        background-color: #f6f6f6;
+        transition: background-color .3s;
+    }
+    
+    body[dark-mode=dark] {
+        background-color: #191724;
+        color: #c4a7e7;
+    }
+    
+    body[dark-mode="dark"] .dark-mode-button span:nth-child(1){
+        background-color: #c4a7e7;
+        color: #141516;
+    }
+    
+    body[dark-mode=dark] .dark-mode-button span:nth-child(2) {
+        left: 65px;
+        background-color: #191724;
     }
 }
 /* Small Screens & Laptops Size */

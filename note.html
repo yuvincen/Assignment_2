@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6619c06411.js" crossorigin="anonymous"></script>
     <script src="Javascript/app.js"></script>
     <title>Note-Ly</title>
 </head>
@@ -17,21 +18,22 @@
             <div class="navigation"><a><span>About</span></a></div>
             <div class="navigation"><a><span>Docs</span></a></div>
         </div>
+        <div class="content">
+            <div>
+                <span onclick="createtextarea()"><i class="fas fa-plus"></i></span>
+            </div>
+            <div id="maintext"></div>
+            <div id="view-note"></div>
+            <button class="dark-mode-button" aria-label="Toggle Dark Mode" onclick="toggle_dark_mode()">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
         <div class="sidebar">
             <div class="side-nav"><strong>My Notes</strong></div>
             <div class="side-nav">Note One</div>
             <div class="side-nav">Note Two</div>
             <button class="sidebar-button" type="button">>></button>
-        </div>
-        <div class="content">
-            <button class="add-text" type="button">+</button>
-            <textarea id="note" name="note" rows="5" cols="33"></textarea>
-            <button class="save-button" type="button">Save</button>
-            <button class="delete-button" type="button">Delete</button>
-            <button class="dark-mode-button" aria-label="Toggle Dark Mode" onclick="toggle_dark_mode()">
-                <span></span>
-                <span></span>
-            </button>
         </div>
         <div class="footer">Created by Vincent Yu (A00699120)</div>
     </div>
